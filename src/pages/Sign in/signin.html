@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🐾 Portal Access | WildLife</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-emerald-950 flex flex-col min-h-screen">
+    <nav class="p-8">
+        <a href="../../../index.html" class="text-white/60 font-black tracking-widest hover:text-white transition">← EXIT TO HOME</a>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="bg-white dark:bg-slate-900 rounded-[4rem] shadow-2xl overflow-hidden max-w-5xl w-full flex flex-col md:flex-row min-h-[600px]">
+            <div class="md:w-1/2 relative hidden md:block">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1000" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-emerald-900/30 mix-blend-multiply"></div>
+            </div>
+            <div class="md:w-1/2 p-16 flex flex-col justify-center">
+                <h2 class="text-5xl font-black text-slate-800 dark:text-white mb-2 leading-none">Access <br>Registry</h2>
+                <p class="text-slate-400 mb-12 font-medium">Verify your credentials to continue.</p>
+                
+                <form class="space-y-6">
+                    <input type="email" placeholder="ADMIN EMAIL" class="w-full p-5 rounded-3xl bg-slate-50 dark:bg-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 font-bold tracking-widest text-xs shadow-inner">
+                    <input type="password" placeholder="ADMIN KEYCODE" class="w-full p-5 rounded-3xl bg-slate-50 dark:bg-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 font-bold tracking-widest text-xs shadow-inner">
+                    <button class="w-full bg-emerald-600 text-white py-5 rounded-3xl font-black shadow-2xl hover:bg-emerald-700 transition tracking-[0.3em]">AUTHORIZE</button>
+                </form>
+
+                <p class="mt-12 text-center text-slate-400 font-bold text-xs tracking-widest uppercase">
+                    Unauthorized? 
+                    <a href="../Signup/signup.html" class="text-emerald-500 hover:underline">Register New Key</a>
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="../../constants/themeConstants.js"></script>
+</body>
+</html>

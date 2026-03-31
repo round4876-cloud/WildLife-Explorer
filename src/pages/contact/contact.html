@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🐾 Connect | WildLife Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-all duration-500 min-h-screen">
+
+<nav class="bg-emerald-900 text-white p-4 flex justify-between items-center shadow-xl sticky top-0 z-50">
+    <div class="font-bold text-2xl flex items-center">🐾 <span class="ml-2 italic tracking-tighter">WILDLIFE</span></div>
+    <div class="hidden md:flex items-center space-x-6 font-bold text-xs uppercase tracking-widest">
+        <a href="../../../index.html" class="hover:text-emerald-400 transition">Home</a>
+        <a href="../about/about.html" class="hover:text-emerald-400 transition">About</a>
+        <a href="contact.html" class="text-emerald-400 border-b-2 border-emerald-400">Contact</a>
+        <a href="../Signup/signup.html" class="hover:text-emerald-200 transition">Join</a>
+        <a href="../Sign%20in/signin.html" class="bg-emerald-600 px-6 py-2 rounded-full hover:bg-emerald-500 transition">Sign In</a>
+    </div>
+    <button id="theme-btn" class="bg-white/10 p-2 rounded-full transition">🌓</button>
+</nav>
+
+<section class="max-w-6xl mx-auto py-20 px-6 flex flex-col md:flex-row gap-16 items-center">
+    <div class="md:w-1/2">
+        <h1 class="text-6xl font-black text-slate-800 dark:text-white mb-6">Let's Talk <br><span class="text-emerald-600">Conservation.</span></h1>
+        <p class="text-lg text-slate-500 dark:text-slate-400 mb-8 font-medium italic">"The best time to protect a species was 20 years ago. The second best time is now."</p>
+        
+        <div class="space-y-4">
+            <p class="flex items-center gap-4 dark:text-white font-bold"><span class="bg-emerald-100 dark:bg-emerald-900 p-2 rounded-lg">📍</span> Islamabad, Pakistan</p>
+            <p class="flex items-center gap-4 dark:text-white font-bold"><span class="bg-emerald-100 dark:bg-emerald-900 p-2 rounded-lg">📧</span> alert@wildlifepro.org</p>
+        </div>
+    </div>
+
+    <div class="md:w-1/2 bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 w-full">
+        <form id="contact-form" class="space-y-6">
+            <input type="text" id="c-name" placeholder="FULL NAME" class="w-full p-4 rounded-2xl bg-slate-50 dark:bg-slate-700 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 font-bold text-xs tracking-widest shadow-inner" required>
+            <input type="email" id="c-email" placeholder="EMAIL ADDRESS" class="w-full p-4 rounded-2xl bg-slate-50 dark:bg-slate-700 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 font-bold text-xs tracking-widest shadow-inner" required>
+            <textarea id="c-msg" placeholder="YOUR MESSAGE OR INQUIRY..." class="w-full p-4 h-32 rounded-2xl bg-slate-50 dark:bg-slate-700 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500 font-bold text-xs tracking-widest shadow-inner" required></textarea>
+            <button type="submit" class="w-full bg-emerald-600 text-white py-4 rounded-2xl font-black shadow-2xl hover:bg-emerald-700 transition tracking-[0.2em]">SEND DISPATCH</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("c-name").value.toUpperCase();
+        alert(`MESSAGE RECEIVED, ${name}. OUR TEAM WILL RESPOND WITHIN 24 HOURS.`);
+        e.target.reset();
+    });
+</script>
+<script src="../../constants/themeConstants.js"></script>
+</body>
+</html>

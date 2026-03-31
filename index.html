@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <title>🐾 WildLife Pro | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-all duration-500 min-h-screen font-sans">
+
+<nav class="bg-emerald-900/90 backdrop-blur-md text-white p-4 flex justify-between items-center shadow-2xl sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+        <span class="text-3xl">🐾</span>
+        <h1 class="text-xl font-black tracking-widest">WILDLIFE <span class="font-light text-emerald-400 uppercase">Pro</span></h1>
+    </div>
+    <div class="hidden md:flex items-center space-x-8 font-semibold text-sm uppercase tracking-widest">
+        <a href="index.html" class="text-emerald-400 border-b-2 border-emerald-400">Home</a>
+        <a href="src/pages/about/about.html" class="hover:text-emerald-400 transition">About</a>
+        <a href="src/pages/contact/contact.html" class="hover:text-emerald-400 transition">Contact</a>
+        <a href="src/pages/Signup/signup.html" class="hover:text-emerald-400 transition">Join</a>
+        <a href="src/pages/Sign%20in/signin.html" class="bg-emerald-600 px-6 py-2 rounded-full hover:bg-emerald-500 transition shadow-xl">Sign In</a>
+    </div>
+    <button id="theme-btn" class="bg-white/10 hover:bg-white/20 p-3 rounded-full transition text-xl">🌓</button>
+</nav>
+
+<main class="max-w-7xl mx-auto p-6">
+    <div class="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-2xl border border-slate-100 dark:border-slate-700 mt-10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-10">
+            <h2 class="text-4xl font-black text-slate-800 dark:text-white italic">Registry Control <span class="text-emerald-500">.</span></h2>
+            <div id="stats-pill" class="bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 px-6 py-2 rounded-full text-sm font-black uppercase tracking-tighter shadow-inner"></div>
+        </div>
+        
+        <form id="animal-form" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <input type="text" id="name" placeholder="Animal Name" class="p-4 rounded-2xl border-0 bg-slate-50 dark:bg-slate-700 dark:text-white focus:ring-2 focus:ring-emerald-500 transition shadow-inner outline-none" required>
+            <input type="text" id="category" placeholder="Category" class="p-4 rounded-2xl border-0 bg-slate-50 dark:bg-slate-700 dark:text-white focus:ring-2 focus:ring-emerald-500 transition shadow-inner outline-none" required>
+            <input type="number" id="population" placeholder="Population" class="p-4 rounded-2xl border-0 bg-slate-50 dark:bg-slate-700 dark:text-white focus:ring-2 focus:ring-emerald-500 transition shadow-inner outline-none" required>
+            <button class="bg-emerald-600 text-white p-4 rounded-2xl font-black hover:bg-emerald-700 transition-all active:scale-95 shadow-xl uppercase tracking-widest">Update Archive</button>
+        </form>
+    </div>
+
+    <div class="flex flex-wrap gap-4 mt-12 mb-10 bg-white/50 dark:bg-slate-800/50 p-4 rounded-3xl border border-white/20 backdrop-blur-xl">
+        <input type="text" id="search" placeholder="🔍 Search Species..." class="flex-grow p-4 rounded-2xl border-0 bg-white dark:bg-slate-700 dark:text-white shadow-lg outline-none focus:ring-2 focus:ring-emerald-500">
+        <select id="filter-pop" class="p-4 rounded-2xl bg-white dark:bg-slate-700 dark:text-white shadow-lg outline-none cursor-pointer">
+            <option value="0">All Data</option>
+            <option value="5000">Near Extinction (>5k)</option>
+            <option value="50000">Stable (>50k)</option>
+        </select>
+        <select id="sort-by" class="p-4 rounded-2xl bg-white dark:bg-slate-700 dark:text-white shadow-lg outline-none cursor-pointer">
+            <option value="name">Sort A-Z</option>
+            <option value="pop">Sort Population</option>
+        </select>
+    </div>
+
+    <div id="cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"></div>
+</main>
+
+<script src="src/constants/themeConstants.js"></script>
+<script src="src/database/data.js"></script>
+<script src="src/pages/home/home.js"></script>
+</body>
+</html>
